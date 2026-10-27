@@ -1,0 +1,253 @@
+
+/* Configurações gerais da página */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 40px;
+}
+
+/* Título principal */
+h1 {
+    color: #e63946;
+    font-size: 40px;
+}
+
+/* Texto abaixo do título */
+p {
+    color: #d4af37;
+    font-size: 18px;
+}
+
+
+/* Cartão do saldo */
+.cartao {
+    background-color: #202020;
+    border: 1px solid #d4af37;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 300px;
+    margin: 30px auto;
+}
+
+/* Título do cartão */
+.cartao h2 {
+    color: #d4af37;
+    font-size: 22px;
+}
+
+/* Valor do saldo */
+.cartao p {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* Organização dos cartões */
+.painel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+/* Ajuste dos cartões */
+.cartao {
+    flex: 1;
+    max-width: 250px;
+    min-width: 200px;
+    box-sizing: border-box;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+/* Efeito ao passar o mouse */
+.cartao:hover {
+    transform: translateY(-5px);
+    border-color: #e63946;
+}
+
+
+
+/* Área de movimentações */
+.movimentacoes {
+    background-color: #202020;
+    border: 1px solid #d4af37;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 25px;
+}
+
+/* Título do formulário */
+.movimentacoes h2 {
+    color: #e63946;
+}
+
+/* Campos do formulário */
+.movimentacoes label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.movimentacoes input,
+.movimentacoes select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    background-color: #121212;
+    color: white;
+    border: 1px solid #d4af37;
+    border-radius: 5px;
+}
+
+/* Botão */
+.movimentacoes button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Área do histórico */
+.historico {
+    background-color: #202020;
+    border: 1px solid #d4af37;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+}
+
+/* Título do histórico */
+.historico h2 {
+    color: #e63946;
+}
+
+/* Lista de movimentações */
+#listaMovimentacoes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Cada movimentação */
+#listaMovimentacoes li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background-color: #121212;
+    border: 1px solid #383838;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Botão Excluir */
+#listaMovimentacoes button {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* Efeito do botão */
+#listaMovimentacoes button:hover {
+    background-color: #b8202d;
+}
+
+
+/* Efeito ao selecionar um campo */
+.movimentacoes input:focus,
+.movimentacoes select:focus {
+    outline: none;
+    border-color: #e63946;
+    box-shadow: 0 0 5px #e63946;
+}
+
+/* Efeito ao passar o mouse no botão Adicionar */
+.movimentacoes button:hover {
+    background-color: #b8202d;
+}
+
+/* Animação suave dos botões */
+.movimentacoes button,
+#listaMovimentacoes button {
+    transition: background-color 0.2s;
+}
+
+
+/* Adaptação para telas pequenas */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .painel {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .cartao {
+        width: 100%;
+        max-width: 350px;
+        min-width: 0;
+        box-sizing: border-box;
+        margin: 10px auto;
+    }
+
+    .movimentacoes,
+    .historico {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 18px;
+        margin: 25px auto;
+    }
+
+    #listaMovimentacoes li {
+        flex-wrap: wrap;
+    }
+}
+
+
+/* Gráfico financeiro */
+.grafico-container {
+    background: #171717;
+    color: #ffffff;
+    padding: 24px;
+    margin-top: 24px;
+    border: 1px solid #3a2525;
+    border-radius: 12px;
+}
+
+.grafico-container h2 {
+    margin-top: 0;
+    color: #e53935;
+}
+
+.grafico-area {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    height: 320px;
+    margin: 0 auto;
+}
